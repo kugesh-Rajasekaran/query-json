@@ -1,6 +1,6 @@
 const fs = require("fs");
 const frameOutput = require("./utils/frame-output.js");
-
+console.log('Processing...');
 /***    inputs  ***/
 
 const fieldVal = "git+https://github.com/kugesh-Rajasekaran/query-json.git";    /* for task 1 */
@@ -89,7 +89,7 @@ function isValExist(lov) {
     objLen = lov.length;
   for (itr = 0; itr < objLen; itr++) {
     const objProp = lov[itr],
-      propType = typeof lov[itr];
+      propType = typeof objProp;
     if (propType == "object") {
       const existOrNot = isValExist(Object.values(objProp));
       if (existOrNot) return true;

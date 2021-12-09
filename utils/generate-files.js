@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 let itr;
-for(itr = 1 ; itr < 20000 ; itr++ ){
+for(itr = 60001 ; itr < 80000 ; itr++ ){
     const contentToWrite = `{
         "name": "query-json",
         "version": "1.0.0",
