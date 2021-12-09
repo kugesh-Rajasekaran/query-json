@@ -15,6 +15,30 @@
     "bugs": {
       "url": "https://github.com/kugesh-Rajasekaran/query-json/issues"
     },
-    "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme"
+    "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme",
+    "repository1": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      },
+      "repository2": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      },
+      "repository3": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      },
+      "repository4": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      },
+      "repository5": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      },
+      "repository6": {
+        "type": "git",
+        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+      }
   }
   

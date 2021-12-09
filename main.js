@@ -1,6 +1,7 @@
-const fs = require("fs");
+const fs = require('fs');
+const frameOutput = require('./utils/frame-output.js');
 
-/* inputs */
+/***    inputs  ***/
 
 const fieldVal = "git+https://github.com/kugesh-Rajasekaran/query-json.git";
 const conditions = {
@@ -9,36 +10,46 @@ const conditions = {
 };
 const folderLoc = "./json-files-large";
 
-/**********/
+/*******************/
+
+/*** Solution ***/
+
 const stTime = new Date();
-const result = {};
+/* consist of all the resultant file names */
+const result = [];
 /* list of file names */
 const lofn = fs.readdirSync(folderLoc);
 const noOfFiles = lofn.length;
+/* promises will contains all the operations  */
 const promises = [];
 const conditionKeys = Object.keys(conditions);
 const successCounter = [];
 let itr;
 for (itr = 0; itr < noOfFiles; itr++) {
-  promises[itr] = performJsonSearch(itr); //.then((val) => console.log(`Finished -> ${itr}`)).catch((err) => { console.log(`Errored -> ${itr}`) } );
+  promises[itr] = performJsonSearch(itr).catch((err) => { console.log(`Errored -> ${itr}`) } );
 }
 
 async function performJsonSearch(itr) {
   const fileName = lofn[itr];
   const fileLoc = `${folderLoc}/${fileName}`;
   const fileContent = fs.readFileSync(fileLoc, "utf-8");
+  const resObj = { name: fileName, size: fs.statSync(fileLoc).size, isFieldValExist: false, isConditionsSatisfied: false };
   const jsonObj = JSON.parse(fileContent);
   const targetValFound = isValExist(Object.values(jsonObj));
-  if (targetValFound) result[itr] = fs.statSync(fileLoc).size;
-  else {
+  if (targetValFound) {
+      resObj['isFieldValExist'] = true;  
+      result[itr] = resObj;
+  }
     successCounter[itr] = 0;
     const conditionSatisfied = isCondSatisfy(
       Object.keys(jsonObj),
       jsonObj,
       itr
     );
-    if (conditionSatisfied) result[itr] = fs.statSync(fileLoc).size;
-  }
+    if (conditionSatisfied) {
+        resObj['isConditionsSatisfied'] = true; 
+        result[itr] = resObj;
+    };
   console.log(`FROM performJsonSearch -> ${Object.keys(result).length}`);
 }
 
@@ -102,16 +113,9 @@ function isValExist(lov) {
   return false;
 }
 
-Promise.all(promises).then((val) => console.log(result, stTime, new Date(), stTime - new Date()));
+Promise.all(promises).then((val) => {
+    console.log(result, stTime, new Date(), stTime - new Date());
+    result.sort((f, s) => f['size'] - s['size']);
+    console.log(frameOutput(result));
+});
 
-//   fs.readFile(fileLoc, "utf-8", (err, jsonStr) => {
-//     if (err) return console.log(err);
-//     const jsonObj = JSON.parse(jsonStr);
-//     const targetValFound = isValExist(Object.values(jsonObj));
-//     if (targetValFound) result[fileName] = fs.statSync(fileLoc).size;
-
-//     // const condSatisfied = isCondSatisfied(Object.keys(jsonObj));
-//     // if(condSatisfied)
-//     //     result[fileName] = fs.statSync(`./json-files/${fileName}`).size;
-//     console.log(result);
-//   });

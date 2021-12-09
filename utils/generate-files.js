@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 let itr;
-for(itr = 60001 ; itr < 80000 ; itr++ ){
+for(itr = 80001 ; itr < 100000 ; itr++ ){
     const contentToWrite = `{
         "name": "query-json",
         "version": "1.0.0",
@@ -23,6 +23,6 @@ for(itr = 60001 ; itr < 80000 ; itr++ ){
       }
       `;
     fs.writeFile(`./json-files-large/file-${itr}.json`, contentToWrite, (err) => {
-          console.log('file saved!!')
+          console.log(`file saved!!`)
       } );
 }
