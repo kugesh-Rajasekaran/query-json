@@ -16,7 +16,19 @@
     "author": "kugesh",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/kugesh-Rajasekaran/query-json/issues"
+      "url": "https://github.com/kugesh/query-json/issues"
+    },
+    "bugs-1": {
+      "url": "https://github.com/Rajasekaran/query-json/issues"
+    },
+    "bugs-2": {
+      "url": "https://github.com/kugeshRajasekaran/query-json/issues"
+    },
+    "bugs-3": {
+      "url": "https://github.com/kugesh_Rajasekaran/query-json/issues"
+    },
+    "bugs-4": {
+      "url": "https://github.com/kugesh_rajasekaran/query-json/issues"
     },
     "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme"
   }

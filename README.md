@@ -24,5 +24,5 @@ Do the following procedure to run the application
 - clone the repo
 - do npm install
 - run npm start for predefined predefined json files and test cases
-- else use generate-files.js in utils folder to generate new json files
+- else use generate-files.js in utils folder to generate new json files (create appropriate folder)
 > note - provide appropriate folder location in main.js (in folderLoc)

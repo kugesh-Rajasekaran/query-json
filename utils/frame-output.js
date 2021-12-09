@@ -11,7 +11,7 @@ function frameOutput(resultObj) {
 const iterateArr = (resultObj) => {
     let itr = 1;
     return resultObj.map((v) => `
-    ${itr++} [seq-no]       ${v.name} [name]        ${v.size} [size]        ${v.isFieldValExist} [is-given-value-found]     ${v.isConditionsSatisfied} [is-given-conditions-satisfied]
+    ${itr++} [seq-no]       ${v.name} [name]        ${v.size} [size(bytes)]        ${v.isFieldValExist} [is-given-value-found]     ${v.isConditionsSatisfied} [is-given-conditions-satisfied]
     `);
 }
 
