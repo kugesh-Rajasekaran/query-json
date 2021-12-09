@@ -1,0 +1,19 @@
+{
+  "name": "query-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kugesh-Rajasekaran/query-json/issues"
+  },
+  "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme"
+}
