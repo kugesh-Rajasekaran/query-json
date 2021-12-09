@@ -26,5 +26,5 @@ Do the following procedure to run the application
 - run npm start for predefined predefined json files and test cases
 - else use generate-files.js in utils folder to generate new json files (create appropriate folder)
 > note - provide appropriate json files folder location in main.js (in folderLoc)
->        to use generate-files.js to generate json files create a folder json-files-large in folder root   
+>      -  to use generate-files.js to generate json files create a folder json-files-large in folder root   
 > clarifications - output will be sorted in ascending order
