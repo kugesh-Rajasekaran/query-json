@@ -1,5 +1,5 @@
 {
-    "name": "query-json",
+    "name": 1,
     "version": "1.0.0",
     "description": "",
     "main": "main.js",
@@ -8,37 +8,16 @@
     },
     "repository": {
       "type": "git",
+      "val": {
+            "detail": "just checking!!"
+      },
       "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
     },
-    "author": "",
+    "author": "kugesh",
     "license": "ISC",
     "bugs": {
       "url": "https://github.com/kugesh-Rajasekaran/query-json/issues"
     },
-    "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme",
-    "repository1": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      },
-      "repository2": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      },
-      "repository3": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      },
-      "repository4": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      },
-      "repository5": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      },
-      "repository6": {
-        "type": "git",
-        "url": "git+https://github.com/kugesh-Rajasekaran/query-json.git"
-      }
+    "homepage": "https://github.com/kugesh-Rajasekaran/query-json#readme"
   }
   
