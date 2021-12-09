@@ -2,22 +2,19 @@ const fs = require("fs");
 const frameOutput = require("./utils/frame-output.js");
 console.log('Processing...');
 /***    inputs  ***/
-
-const fieldVal = "git+https://github.com/kugesh-Rajasekaran/query-json.git";    /* for task 1 */
+const fieldVal = "git+https://github.com/kugesh-Rajasekaran/query-json.git";    /* for task 1 - example */
 /**
  * valid operators - [equal, not-equal, greater-than, less-than]
  */
-const conditions = {                                                            /* for task 2 */
-  detail: { value: "just checking!!", condition: "equal" },
+const conditions = {                                                            /* for task 2 - example*/
+  detail: { value: "just checking!!", condition: "not-equal" },
   start: { value: "node test-1", condition: "equal" },
   author: { value: "kugesh", condition: "equal" },
 };
 const folderLoc = "./json-files";           /* folder location */
-
 /*******************/
 
 /*** Solution ***/
-
 const stTime = new Date();
 const result = [];          /* consist of all the resultant file names */
 let lofn;
@@ -112,12 +109,12 @@ function isCondSatisfy(lok, fileContent, itr) {
   for (keyItr = 0; keyItr < lokLen; keyItr++) {
     const content = fileContent[lok[keyItr]];
     if (conditionKeys.includes(lok[keyItr])) {
-      const result = applyCondition(lok[keyItr], content);
-      if (result && successCounter[itr] < conditionKeys.length)
+      const phac = applyCondition(lok[keyItr], content);            /* phac - placeholder for apply condition */
+      if (phac && successCounter[itr] < conditionKeys.length)
         successCounter[itr]++;
     } else if (typeof content == "object") {
-      const result = isCondSatisfy(Object.keys(content), content, itr);
-      if (result && successCounter[itr] < conditionKeys.length)
+      const phics = isCondSatisfy(Object.keys(content), content, itr);      /* phics - placeholder for isCondSatisfy */
+      if (phics && successCounter[itr] < conditionKeys.length)
         successCounter[itr]++;
     }
   }
